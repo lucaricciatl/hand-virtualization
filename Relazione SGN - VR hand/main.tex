@@ -1,0 +1,136 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+\usepackage{comment}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{mathtools}
+\usepackage{commath}
+%\usepackage[sc,osf]{mathpazo}
+\usepackage{gensymb} % \degree command (°)
+\usepackage{dirtytalk} % \say command ("")
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{afterpage}
+\usepackage{imakeidx}
+\usepackage{biblatex}
+\usepackage{blindtext}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{subfloat}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.8,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=shadowbox,
+  language=Matlab,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage[framed,useliterate]{mcode} % after "framed" you can put also "numbered" for line numbers, and "autolinebreaks" for '...'
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\newcommand{\columnvector}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\setlength{\columnseprule}{1 pt}
+
+
+\makeatletter % makes the vertical space in vectors customizable
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+\makeatother
+
+\addbibresource{biblio/Multiple Model Adaptive Complementary Filter for Attitude Estimation.bib}
+\addbibresource{biblio/Comparison.bib}
+\addbibresource{biblio/MPU6050.bib}
+\addbibresource{biblio/MPU9250.bib}
+\addbibresource{biblio/tilt-compensated ecompass.bib}
+\addbibresource{biblio/calibrating ecompass.bib}
+\addbibresource{biblio/ahrs.bib}
+
+
+\begin{document}
+
+\input{copertina.tex}
+ \tableofcontents
+ \clearpage
+\input{1-Contenuto}
+\input{2-Descrizione}
+\input{3-Hardware}
+\input{4-Invio_dati}
+\input{5-Filtro}
+\input{6-VR}
+\input{7-Conclusioni}
+
+\printbibliography
+
+\end{document}
+
+
+
