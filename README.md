@@ -1,3 +1,8 @@
+![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_real.jpg)
+![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_sym.jpg)
+![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_real.jpg)
+![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_sym.jpg)
+
 colcon build --symlink-install  // build pkg and create symbolic links
 
 run files ->    python3 /home/atled/dev_ws/src/esp32_SerialInterface/esp32_SerialInterface/interface.py && python3 /home/atled/dev_ws/src/DataElaborationAndFiltering/      DataElaborationAndFiltering/filter_data.py && python3 /home/atled/dev_ws/src/hand_pose_publisher/hand_pose_publisher/publishpose.py && python3 /home/atled/dev_ws/src/kinematic_optimizer/kinematic_optimizer/kinematic_optimizer.py
