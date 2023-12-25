@@ -45,10 +45,12 @@ IMU Placement
 
 The MPU-9250s, equipped with a magnetometer, are positioned on the back of the hand (MPU0) and on the proximal phalanx (MPU1) to visualize yaw and rotations relative to the palm. The MPU-6050 is positioned on the distal phalanx (MPU2).
 
-![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_real.jpg)
-![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_sym.jpg)
-![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_real.jpg)
-![alt text](https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_sym.jpg)
+<div align="center">
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_real.jpg" alt="Real Image 1" width="400"/>
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_sym.jpg" alt="Symmetric Image 1" width="400"/>
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_real.jpg" alt="Real Image 2" width="400"/>
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_sym.jpg" alt="Symmetric Image 2" width="400"/>
+</div>
 
 # setup
 - colcon build --symlink-install  // build pkg and create symbolic links
