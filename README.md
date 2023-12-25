@@ -46,11 +46,12 @@ IMU Placement
 The MPU-9250s, equipped with a magnetometer, are positioned on the back of the hand (MPU0) and on the proximal phalanx (MPU1) to visualize yaw and rotations relative to the palm. The MPU-6050 is positioned on the distal phalanx (MPU2).
 
 <div align="center">
-  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_real.jpg" alt="Real Image 1" width="400"/>
-  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_sym.jpg" alt="Symmetric Image 1" width="400"/>
-  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_real.jpg" alt="Real Image 2" width="400"/>
-  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_sym.jpg" alt="Symmetric Image 2" width="400"/>
+  <img src="Relazione SGN - VR hand/immagini/dito_catena_cinematica.jpg" alt="Real Image 1" width="400"/>
+  <img src="Relazione SGN - VR hand/immagini/schema_blocchi.jpg" alt="Symmetric Image 1" width="400"/>
+  <img src="Relazione SGN - VR hand/immagini/IMU_sdr.jpg" alt="Real Image 2" width="400"/>
+  <img src="Relazione SGN - VR hand/immagini/filter.png" alt="Symmetric Image 2" width="400"/>
 </div>
+
 
 # setup
 - colcon build --symlink-install  // build pkg and create symbolic links
@@ -72,6 +73,13 @@ Once joint angle estimates were available in Unity, the values were transformed 
 For result validation, motion tracking considerations were exclusively used. By moving the glove, we considered the estimation good when the virtual hand followed the movement.
 
 Due to the conventions used in the filter and those used by Unity, the validity of the simulation lies in angles between 0 and 180 degrees. Beyond these angles, there are orientation changes in the virtual hand. Given the excessively imprecise estimate of the angle $\alpha_1$, it was kept at 0.
+
+<div align="center">
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_real.jpg" alt="Real Image 1" width="400"/>
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/2_sym.jpg" alt="Symmetric Image 1" width="400"/>
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_real.jpg" alt="Real Image 2" width="400"/>
+  <img src="https://github.com/ATLED-3301/vrhand/blob/main/Relazione%20SGN%20-%20VR%20hand/immagini/confronto/7_sym.jpg" alt="Symmetric Image 2" width="400"/>
+</div>
 
 
 LOG RAW DATA --> ros2 topic echo MPU{@}_rawdata                     //@ : imu identifier
